@@ -24,7 +24,7 @@
     var g = document.getElementById('g'), info = document.getElementById('i');
     while (g.firstChild) g.removeChild(g.firstChild);
     while (info.firstChild) info.removeChild(info.firstChild);
-    var valid = data && typeof data === 'object' && /^\d{4}-\d{2}$/.test(data.m);
+    var valid = data && typeof data === 'object' && /^\d{4}-(0[1-9]|1[0-2])$/.test(data.m);
     var now = new Date();
     var m = valid ? data.m : now.getFullYear() + '-' + ('0' + (now.getMonth() + 1)).slice(-2);
     var y = Number(m.slice(0, 4)), mo = Number(m.slice(5, 7)) - 1;
